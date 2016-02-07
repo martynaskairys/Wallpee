@@ -21,9 +21,15 @@ public class FolderAActivity extends AppCompatActivity {
 
                 Toast.makeText(FolderAActivity.this, "You are leaving this app....", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.addCategory(Intent.CATEGORY_HOME);
-                startActivity(intent);
+                
+
+               Intent intent = new Intent(Intent.ACTION_MAIN);
+               intent.addCategory(Intent.CATEGORY_HOME);
+               startActivity(intent);
+
+
+
+
             }
         });
 

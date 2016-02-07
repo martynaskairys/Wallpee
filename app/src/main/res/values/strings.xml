@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Wallpee</string>
+    <string name="textExplainingFolderContent">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Maecenas ut libero id est maximus hendrerit varius posuere augue.
+         Quisque in augue enim. Cum sociis natoque penatibus et magnis dis
+         parturient montes, nascetur ridiculus mus. Morbi in lacus maximus urna tincidunt imperdiet.
+    </string>
+
+
 </resources>

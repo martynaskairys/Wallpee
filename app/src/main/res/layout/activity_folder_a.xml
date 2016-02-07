@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut libero id est maximus hendrerit varius posuere augue. Quisque in augue enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi in lacus maximus urna tincidunt imperdiet. "
+        android:text="@string/textExplainingFolderContent"
         android:id="@+id/textExplainingFolderContent"
         android:layout_alignParentTop="true"
         android:layout_marginTop="56dp"

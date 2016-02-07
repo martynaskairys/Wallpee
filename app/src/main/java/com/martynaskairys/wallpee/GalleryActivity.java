@@ -21,8 +21,18 @@ public class GalleryActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Toast.makeText(GalleryActivity.this, "Yoooho", Toast.LENGTH_SHORT).show();
-
                 Intent intent = new Intent(GalleryActivity.this, FolderAActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button buttonB = (Button) findViewById(R.id.buttonFolderB);
+        buttonB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(GalleryActivity.this, "Yoooho", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(GalleryActivity.this, FolderBActivity.class);
                 startActivity(intent);
             }
         });
