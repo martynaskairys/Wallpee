@@ -16,11 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".GalleryActivity">
+        <activity android:name=".ChoosingFolderActivity">
         </activity>
-        <activity android:name=".FolderAActivity">
-        </activity>
-        <activity android:name=".FolderBActivity">
+        <activity android:name=".ExplainingChosenFolderActivity">
         </activity>
     </application>
 

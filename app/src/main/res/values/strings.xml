@@ -1,11 +1,19 @@
 <resources>
     <string name="app_name">Wallpee</string>
-    <string name="textExplainingFolderContent">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-         Maecenas ut libero id est maximus hendrerit varius posuere augue.
-         Quisque in augue enim. Cum sociis natoque penatibus et magnis dis
-         parturient montes, nascetur ridiculus mus. Morbi in lacus maximus urna tincidunt imperdiet.
-    </string>
+    <string name="text_explaining_folder_content_a">this is A content text</string>
+
+    <string name="text_explaining_folder_content_b">this is B content text</string>
+
+    <string name="folder_a">Folder A</string>
+    <string name="folder_b">Folder B</string>
+    <string name="choosing_folder">Choose folders you want to....</string>
+    <string name="leaving_app">You are leaving this app....</string>
+    <string name="yoo_message_a_folder">tamp aram :)</string>
+    <string name="yoo_message_b_folder">Yoooho</string>
+    <string name="toast_message_superstar">You are about to become a Super Star</string>
+    <string name="text_app_purpose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut libero id est maximus hendrerit varius posuere augue. Quisque in augue enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi in lacus maximus urna tincidunt imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut libero id est maximus hendrerit varius posuere augue. Quisque in augue enim.</string>
+    <string name="show_me_the_pictures">Show me the pictures</string>
+    <string name="ok">OK</string>
 
 
 </resources>

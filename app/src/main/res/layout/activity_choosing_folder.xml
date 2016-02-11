@@ -4,49 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e1e4e4"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.martynaskairys.wallpee.GalleryActivity"
-    android:background="#e1e4e4">
+    tools:context=".ChoosingFolderActivity">
 
     <Button
+        android:id="@+id/button_folder_a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Folder A"
-        android:id="@+id/buttonFolderA"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="73dp"
-        android:paddingLeft="100dp"
-        android:paddingRight="100dp"
-        android:paddingTop="35dp"
-        android:paddingBottom="35dp"
-        android:background="#c7e5f6"/>
+        android:layout_marginTop="64dp"
+        android:background="#c7e5f6"
+        android:paddingBottom="32dp"
+        android:paddingLeft="96dp"
+        android:paddingRight="96dp"
+        android:paddingTop="32dp"
+        android:text="@string/folder_a"/>
 
     <Button
+        android:id="@+id/button_folder_b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Folder B"
-        android:id="@+id/buttonFolderB"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:paddingLeft="100dp"
-        android:paddingTop="35dp"
-        android:paddingRight="100dp"
-        android:paddingBottom="35dp"
-        android:background="#FFC7E5F6"/>
+        android:layout_centerVertical="true"
+        android:background="#FFC7E5F6"
+        android:paddingBottom="32dp"
+        android:paddingLeft="96dp"
+        android:paddingRight="96dp"
+        android:paddingTop="32dp"
+        android:text="@string/folder_b"/>
 
     <TextView
+        android:id="@+id/text_view_explaining_gallery_page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Choose folders you want to...."
-        android:id="@+id/textViewExplainingGalleryPage"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="66dp"
-        android:textColor="#e0dada"/>
+        android:layout_marginBottom="64dp"
+        android:text="@string/choosing_folder"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"/>
 
 </RelativeLayout>
