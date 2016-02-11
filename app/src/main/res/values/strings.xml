@@ -1,9 +1,7 @@
 <resources>
     <string name="app_name">Wallpee</string>
     <string name="text_explaining_folder_content_a">this is A content text</string>
-
     <string name="text_explaining_folder_content_b">this is B content text</string>
-
     <string name="folder_a">Folder A</string>
     <string name="folder_b">Folder B</string>
     <string name="choosing_folder">Choose folders you want to....</string>

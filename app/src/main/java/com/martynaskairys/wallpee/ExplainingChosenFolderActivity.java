@@ -24,8 +24,11 @@ public class ExplainingChosenFolderActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Toast.makeText(ExplainingChosenFolderActivity.this, R.string.leaving_app, Toast.LENGTH_SHORT).show();
-               Intent intent = new Intent(Intent.ACTION_MAIN);
-               intent.addCategory(Intent.CATEGORY_HOME);
+              // Intent intent = new Intent(Intent.ACTION_MAIN);
+              // intent.addCategory(Intent.CATEGORY_HOME);
+
+                Intent intent = new Intent(ExplainingChosenFolderActivity.this, Picassooo.class);
+
                startActivity(intent);
 
             }
