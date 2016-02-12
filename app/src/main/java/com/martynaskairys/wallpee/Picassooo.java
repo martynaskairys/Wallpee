@@ -1,5 +1,6 @@
 package com.martynaskairys.wallpee;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -16,8 +17,17 @@ public class Picassooo extends AppCompatActivity {
 
         ImageView imageView = (ImageView) findViewById(R.id.imageView);
 
+        Intent intent = getIntent();
+        Bundle b = intent.getExtras();
+        String url = null;
+
+        if (b != null) {
+            url = (String) b.get("picture");
+
+        }
+
         Picasso.with(this)
-                .load("http://i.kinja-img.com/gawker-media/image/upload/s--hUWAg1eC--/wsgtilb9ibbxysybe3mu.png")
+                .load(url)
                 //.placeholder(R.drawable.ic_placeholder)
                 // .error(R.drawable.ic_error_fallback)
                 // .resize(250, 200)
