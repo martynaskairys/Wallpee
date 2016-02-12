@@ -32,7 +32,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
 	@Override
 	public void onBindViewHolder(ViewHolder holder, int position) {
-		Picasso.with(context).load(imageUrls[position]).into(holder.imageView);
+		Picasso.with(context)
+				.load(imageUrls[position])
+				.placeholder(R.drawable.mok)
+				.into(holder.imageView);
 	}
 
 	@Override
