@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 public class ChoosingFolderActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,9 +22,11 @@ public class ChoosingFolderActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                //Toast.makeText(ChoosingFolderActivity.this, R.string.yoo_message_a_folder, Toast.LENGTH_SHORT).show();
 
-                Toast.makeText(ChoosingFolderActivity.this, R.string.yoo_message_a_folder, Toast.LENGTH_SHORT).show();
+                String folderA = getString(R.string.text_explaining_folder_content_a);
                 Intent intent = new Intent(ChoosingFolderActivity.this, ExplainingChosenFolderActivity.class);
+                intent.putExtra("folderContentExplaining", folderA);
                 startActivity(intent);
 
             }
@@ -34,13 +37,16 @@ public class ChoosingFolderActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(ChoosingFolderActivity.this, R.string.yoo_message_b_folder, Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(ChoosingFolderActivity.this, ExplainingChosenFolderActivity.class);
-                startActivity(intent);
+                // Toast.makeText(ChoosingFolderActivity.this, R.string.yoo_message_b_folder, Toast.LENGTH_SHORT).show();
 
+                String folderB = getString(R.string.text_explaining_folder_content_b);
+                Intent intent = new Intent(ChoosingFolderActivity.this, ExplainingChosenFolderActivity.class);
+                intent.putExtra("folderContentExplaining", folderB);
+                startActivity(intent);
 
             }
         });
 
     }
+
 }
