@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/lib/res-auto">
+
+
+    <item
+        app:icon="@drawable/mok"
+        app:id="@+id/action_back"
+        app:showAsAction="never"
+        android:title="@string/back_to_Main"/>
+    <item
+        app:icon="@drawable/mok"
+        app:id="@+id/action_setwallpaper"
+        app:showAsAction="ifRoom|withText"
+        android:title="@string/action_setwallpaper"/>
+
+</menu>

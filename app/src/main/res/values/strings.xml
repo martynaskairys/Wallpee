@@ -12,6 +12,8 @@
     <string name="text_app_purpose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut libero id est maximus hendrerit varius posuere augue. Quisque in augue enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi in lacus maximus urna tincidunt imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut libero id est maximus hendrerit varius posuere augue. Quisque in augue enim.</string>
     <string name="show_me_the_pictures">Show me the pictures</string>
     <string name="ok">OK</string>
+    <string name="action_setwallpaper">set_wallpaper</string>
+    <string name="back_to_Main">back_to_main</string>
 
 
 </resources>
