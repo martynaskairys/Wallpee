@@ -1,5 +1,9 @@
 package com.martynaskairys.wallpee;
 
+import android.graphics.Picture;
+
+import java.util.Random;
+
 public class Links {
 
 	public static String[] IMAGE_URLS = {
@@ -13,5 +17,22 @@ public class Links {
 			"https://app.box.com/representation/file_version_55089755065/image_2048_jpg/1.jpg?shared_name=ko3y2zo5wlsu6qvq8q2bx81xwz9bv7o3",
 			"http://oi41.tinypic.com/sdfewy.jpg"
 	};
+
+	// Method (abilities: things the object can do)
+	public String getPicture() {
+
+		String picture = "";
+
+		// Randomly select a picture
+		Random randomGenerator = new Random();  // Construct a new Random number generator
+		int randomNumber = randomGenerator.nextInt(IMAGE_URLS.length);
+
+		picture = IMAGE_URLS[randomNumber];
+
+		return picture;
+	}
+
+
+
 
 }

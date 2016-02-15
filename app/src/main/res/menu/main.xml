@@ -13,6 +13,6 @@
         app:icon="@drawable/mok"
         app:id="@+id/action_setwallpaper"
         app:showAsAction="ifRoom|withText"
-        android:title="@string/action_setwallpaper"/>
+        android:title="@string/action_set_wallpaper"/>
 
 </menu>
