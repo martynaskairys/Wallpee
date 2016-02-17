@@ -16,25 +16,31 @@ public class ExplainingChosenFolderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_explaining_chosen_folder);
 
-        TextView textExplainingFolderChoice = (TextView) findViewById(R.id.text_explaining_folder_content);
-
-        Intent intent = getIntent();
-        Bundle b = intent.getExtras();
-
-        if (b != null) {
-            String j = (String) b.get(EXPLANATION);
-            textExplainingFolderChoice.setText(j);
-        }
-
-
-        Button buttonF = (Button) findViewById(R.id.button_ok);
-        buttonF.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ExplainingChosenFolderActivity.this, ThumbnailActivity.class);
-                startActivity(intent);
-
-            }
-        });
+		setExplanation();
+		setConfirmationButton();
     }
+
+	private void setConfirmationButton() {
+		Button buttonF = (Button) findViewById(R.id.button_ok);
+		buttonF.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(ExplainingChosenFolderActivity.this, ThumbnailActivity.class);
+				startActivity(intent);
+
+			}
+		});
+	}
+
+	private void setExplanation() {
+		TextView textExplainingFolderChoice = (TextView) findViewById(R.id.text_explaining_folder_content);
+
+		Intent intent = getIntent();
+		Bundle b = intent.getExtras();
+
+		if (b != null) {
+			String j = (String) b.get(EXPLANATION);
+			textExplainingFolderChoice.setText(j);
+		}
+	}
 }
