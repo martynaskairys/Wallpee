@@ -8,25 +8,22 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ExplainingChosenFolderActivity">
+    tools:context="com.martynaskairys.wallpee.ChoosingRandomPicture">
 
-    <TextView
-        android:id="@+id/text_explaining_folder_content"
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="64dp"
-        android:text="@string/text_explaining_folder_content_a"
-        android:textAppearance="?android:attr/textAppearanceMedium"/>
+        android:id="@+id/imageView2"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/mok"/>
 
     <Button
-        android:id="@+id/button_ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/choose_random_pic"
+        android:id="@+id/buttonChooseRandomPicture"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="64dp"
-        android:text="@string/ok"/>
+        android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>

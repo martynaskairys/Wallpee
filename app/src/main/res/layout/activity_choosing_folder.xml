@@ -26,7 +26,8 @@
         android:text="@string/folder_a"/>
 
     <Button
-        android:id="@+id/button_folder_b"
+        android:id="@+id/button_folder_c"
+        android:layout_below="@id/button_folder_a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -36,7 +37,8 @@
         android:paddingLeft="96dp"
         android:paddingRight="96dp"
         android:paddingTop="32dp"
-        android:text="@string/folder_b"/>
+        android:layout_marginTop="16dp"
+        android:text="@string/folder_c"/>
 
     <TextView
         android:id="@+id/text_view_explaining_gallery_page"

@@ -32,20 +32,22 @@ public class ChoosingFolderActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonB = (Button) findViewById(R.id.button_folder_b);
-        buttonB.setOnClickListener(new View.OnClickListener() {
+        Button buttonC = (Button) findViewById(R.id.button_folder_c);
+        buttonC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 // Toast.makeText(ChoosingFolderActivity.this, R.string.yoo_message_b_folder, Toast.LENGTH_SHORT).show();
 
-                String folderB = getString(R.string.text_explaining_folder_content_b);
-                Intent intent = new Intent(ChoosingFolderActivity.this, ExplainingChosenFolderActivity.class);
-                intent.putExtra("folderContentExplaining", folderB);
+               // String folderB = getString(R.string.text_explaining_folder_content_b);
+                Intent intent = new Intent(ChoosingFolderActivity.this, ChoosingRandomPicture.class);
+               // intent.putExtra("folderContentExplaining", folderB);
                 startActivity(intent);
 
             }
         });
+
+
 
     }
 
