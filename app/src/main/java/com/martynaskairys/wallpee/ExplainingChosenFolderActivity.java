@@ -9,7 +9,9 @@ import android.widget.TextView;
 
 public class ExplainingChosenFolderActivity extends AppCompatActivity {
 
-    @Override
+	public static final String EXPLANATION = "explanation";
+
+	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_explaining_chosen_folder);
@@ -20,7 +22,7 @@ public class ExplainingChosenFolderActivity extends AppCompatActivity {
         Bundle b = intent.getExtras();
 
         if (b != null) {
-            String j = (String) b.get("folderContentExplaining");
+            String j = (String) b.get(EXPLANATION);
             textExplainingFolderChoice.setText(j);
         }
 
