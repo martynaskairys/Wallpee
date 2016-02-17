@@ -38,18 +38,20 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 				.placeholder(R.drawable.mok)
 				.into(holder.imageView);
 
+		setOnClickListener(holder, imageUrls[position]);
+	}
+
+	private void setOnClickListener(ViewHolder holder, final String imageUrl) {
 		holder.imageView.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 
-				String url = imageUrls[position];
+				String url = imageUrl;
 
-				Intent intent = new Intent(context, Picassooo.class);
-				intent.putExtra("picture", url);
+				Intent intent = new Intent(context, PictureActivity.class);
+				intent.putExtra(PictureActivity.PICTURE, url);
 				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); //not recommended?
 				context.startActivity(intent);
-
-
 			}
 		});
 	}

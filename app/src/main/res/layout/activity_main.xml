@@ -37,7 +37,6 @@
             android:layout_alignParentBottom="true"
             android:layout_below="@+id/text_explaining_app_purpose"
             android:layout_centerHorizontal="true"
-
             android:layout_marginTop="16dp"
             android:text="@string/show_me_the_pictures"/>
 
