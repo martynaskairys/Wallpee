@@ -44,8 +44,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
 				String url = imageUrls[position];
 
-				Intent intent = new Intent(context, Picassooo.class);
-				intent.putExtra("picture", url);
+				Intent intent = new Intent(context, PictureActivity.class);
+				intent.putExtra(PictureActivity.PICTURE, url);
 				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); //not recommended?
 				context.startActivity(intent);
 
