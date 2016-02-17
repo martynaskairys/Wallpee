@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
@@ -26,7 +25,7 @@ public class ChoosingRandomPicture extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String picture = mPictures.getPicture();
+                String picture = mPictures.getRandomPictureUrl();
 
                 Picasso.with(ChoosingRandomPicture.this)
 
