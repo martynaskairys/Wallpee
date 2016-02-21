@@ -15,6 +15,7 @@ public class ChoosingFolderActivity extends AppCompatActivity {
         setContentView(R.layout.activity_choosing_folder);
 
 		setupFolderAButton();
+		setupFolderBButton();
 		setFolderCButton();
     }
 
@@ -41,5 +42,20 @@ public class ChoosingFolderActivity extends AppCompatActivity {
 			}
 		});
 	}
+
+	private void setupFolderBButton() {
+		Button buttonA = (Button) findViewById(R.id.button_folder_b);
+		buttonA.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				String folderB = getString(R.string.text_explaining_folder_content_b);
+				Intent intent = new Intent(ChoosingFolderActivity.this, ExplainingChosenFolderActivity.class);
+				intent.putExtra(ExplainingChosenFolderActivity.EXPLANATION, folderB);
+				startActivity(intent);
+			}
+		});
+	}
+
+
 
 }

@@ -54,6 +54,7 @@ public class PictureActivity extends AppCompatActivity {
                 .setOnMenuItemClickListener(this.setWallpaperClickListener)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         return super.onCreateOptionsMenu(menu);
+
     }
 
     private OnMenuItemClickListener setWallpaperClickListener = new OnMenuItemClickListener() {
@@ -73,6 +74,7 @@ public class PictureActivity extends AppCompatActivity {
             return true;
         }
     };
+
 
 
 }
