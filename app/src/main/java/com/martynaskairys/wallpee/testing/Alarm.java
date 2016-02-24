@@ -11,11 +11,15 @@ import android.os.PowerManager;
 import android.os.Vibrator;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.martynaskairys.wallpee.ExitAppActivity;
+import com.martynaskairys.wallpee.MainActivity;
 import com.martynaskairys.wallpee.R;
+import com.martynaskairys.wallpee.RandomlyChangeWallpapers;
+import com.martynaskairys.wallpee.WallpaperService;
 
 public class Alarm extends BroadcastReceiver {
 
@@ -30,8 +34,17 @@ public class Alarm extends BroadcastReceiver {
         Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
         vibrator.vibrate(2000);
 
-        // PendingIntent.getActivity (null,2 , null, 4,null);
 
+        Intent serviceIntent = new Intent (context, WallpaperService.class);
+        context.startService(serviceIntent);
+
+
+
+       // RandomlyChangeWallpapers rcw = new RandomlyChangeWallpapers();
+        //rcw.changeRandomly(context);
+
+        // PendingIntent.getActivity (null,2 , null, 4,null);
+/*
         Bundle extras = intent.getExtras();
         if (extras != null) {
             String state = extras.getString(TelephonyManager.EXTRA_STATE);
@@ -43,7 +56,22 @@ public class Alarm extends BroadcastReceiver {
             }
 
 
+
         }
+
+
+        if (extras != null) {
+            if(extras!=null){
+                if(extras.containsKey("value")){
+
+                    System.out.println("Value is: "+extras.get("value"));
+                }
+            }
+
+
+
+        }
+        */
     }
 }
 

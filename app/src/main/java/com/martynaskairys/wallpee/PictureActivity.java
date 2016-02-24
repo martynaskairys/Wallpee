@@ -17,38 +17,42 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 
-/** Shows a large resolution picture for the user to decide whether they want to to use it as a background */
+/**
+ * Shows a large resolution picture for the user to decide whether they want to to use it as a background
+ */
 public class PictureActivity extends AppCompatActivity {
 
-	public static final String PICTURE = "picture";
-	private String imageUrl;
+    public static final String PICTURE = "picture";
+    private String imageUrl;
+
+    private Links mPictures = new Links();
 
 
-	@Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.picture_activity);
 
-		setPicture();
+        setPicture();
     }
 
-	private void setPicture() {
-		ImageView imageView = (ImageView) findViewById(R.id.imageView);
+    private void setPicture() {
+        ImageView imageView = (ImageView) findViewById(R.id.imageView);
 
-		Intent intent = getIntent();
-		Bundle b = intent.getExtras();
+        Intent intent = getIntent();
+        Bundle b = intent.getExtras();
 
-		imageUrl = null;
-		if (b != null) {
-			imageUrl = (String) b.get(PICTURE);
-		}
+        imageUrl = null;
+        if (b != null) {
+            imageUrl = (String) b.get(PICTURE);
+        }
 
-		Picasso.with(this)
-				.load(imageUrl)
-				.into(imageView);
-	}
+        Picasso.with(this)
+                .load(imageUrl)
+                .into(imageView);
+    }
 
-	@Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.add(R.string.set_wallpaper)
                 .setOnMenuItemClickListener(this.setWallpaperClickListener)
@@ -62,10 +66,9 @@ public class PictureActivity extends AppCompatActivity {
 
             WallpaperManager wpm = WallpaperManager.getInstance(PictureActivity.this);
             try {
-                InputStream ins = new URL(imageUrl).openStream();
+                InputStream ins = new URL(mPictures.getRandomPictureUrl()).openStream();
                 wpm.setStream(ins);
 
-                Toast.makeText(PictureActivity.this, R.string.wallpaper_changed, Toast.LENGTH_SHORT).show();
 
             } catch (IOException e) {
                 // TODO Auto-generated catch block
@@ -74,7 +77,6 @@ public class PictureActivity extends AppCompatActivity {
             return true;
         }
     };
-
 
 
 }

@@ -36,6 +36,12 @@ public class ExitAppActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exit_app);
 
+
+        Intent intent = new Intent();
+        intent.setAction("Alarm");
+        intent.putExtra("value", 1000);
+        sendBroadcast(intent);
+
          /* Retrieve a PendingIntent that will perform a broadcast */
         Intent alarmIntent = new Intent(ExitAppActivity.this, Alarm.class);
         pendingIntent = PendingIntent.getBroadcast(ExitAppActivity.this, 0, alarmIntent, 0);
@@ -67,7 +73,13 @@ public class ExitAppActivity extends AppCompatActivity {
         Toast.makeText(this, "Alarm Set", Toast.LENGTH_SHORT).show();
 
 
+        Intent intent = new Intent();
+        intent.setAction("Alarm");
+        sendBroadcast(intent);
+
+
     }
+
 
 
 }

@@ -43,6 +43,9 @@
 
         <activity android:name=".ExitAppActivity">
         </activity>
+
+        <service android:name=".WallpaperService"></service>
+
     </application>
 
 </manifest>

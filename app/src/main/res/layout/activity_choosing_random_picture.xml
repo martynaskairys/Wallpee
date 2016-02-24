@@ -11,19 +11,27 @@
     tools:context="com.martynaskairys.wallpee.ChoosingRandomPicture">
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:src="@drawable/mok"/>
 
     <Button
+        android:id="@+id/buttonChooseRandomPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/choose_random_pic"/>
+
+    <Button
+        android:id="@+id/buttonSetRandomWallpaper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/choose_random_pic"
-        android:id="@+id/buttonChooseRandomPicture"
-        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/imageView2"
         android:layout_centerHorizontal="true"/>
 
 
