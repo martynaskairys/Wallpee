@@ -19,4 +19,6 @@
     <string name="text_explaining_folder_content_b">This folder B is used for...</string>
     <string name="choose_new_folder">Choose New Folder</string>
     <string name="ok_lets_do_it">Ok Let\'s do it</string>
+    <string name="do_you_like_your_new_wallpaper">"Do you like your new wallpaper "</string>
+    <string name="alarm_set_from_device_boot_message">Alarm Set from device boot. Is it working?</string>
 </resources>

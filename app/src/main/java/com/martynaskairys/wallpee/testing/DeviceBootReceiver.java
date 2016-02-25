@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 
+import com.martynaskairys.wallpee.R;
+
 /**
  *         <p/>
  *         Broadcast reciever, starts when the device gets starts.
@@ -25,7 +27,7 @@ public class DeviceBootReceiver extends BroadcastReceiver {
             int interval = 8000;
             manager.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), interval, pendingIntent);
 
-            Toast.makeText(context, "Alarm Set from device boot. Is it working?", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, R.string.alarm_set_from_device_boot_message, Toast.LENGTH_SHORT).show();
         }
     }
 }

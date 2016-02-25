@@ -10,23 +10,17 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.Toast;
 import android.view.MenuItem.OnMenuItemClickListener;
-
 import com.squareup.picasso.Picasso;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 
-/**
- * Shows a large resolution picture for the user to decide whether they want to to use it as a background
- */
-public class PictureActivity extends AppCompatActivity {
+
+ //Shows a large resolution picture for the user to decide whether they want to to use it as a background
+ public class PictureActivity extends AppCompatActivity {
 
     public static final String PICTURE = "picture";
     private String imageUrl;
-
-    private Links mPictures = new Links();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,9 +60,11 @@ public class PictureActivity extends AppCompatActivity {
 
             WallpaperManager wpm = WallpaperManager.getInstance(PictureActivity.this);
             try {
-                InputStream ins = new URL(mPictures.getRandomPictureUrl()).openStream();
+
+                InputStream ins = new URL(imageUrl).openStream();
                 wpm.setStream(ins);
 
+                Toast.makeText(PictureActivity.this, R.string.wallpaper_changed, Toast.LENGTH_SHORT).show();
 
             } catch (IOException e) {
                 // TODO Auto-generated catch block

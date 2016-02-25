@@ -8,14 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-
 import com.squareup.picasso.Picasso;
 
-/**
- * Single Responsibility:
- *
- * Populates GridView in MainActivity
- */
+
+ //Populates GridView in MainActivity
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
 	private String[] imageUrls;
@@ -46,11 +42,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 			@Override
 			public void onClick(View v) {
 
-				String url = imageUrl;
-
 				Intent intent = new Intent(context, PictureActivity.class);
-				intent.putExtra(PictureActivity.PICTURE, url);
-				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); //not recommended?
+				intent.putExtra(PictureActivity.PICTURE, imageUrl);
+				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); //TODO (setFlags are not recommended?)
 				context.startActivity(intent);
 			}
 		});
