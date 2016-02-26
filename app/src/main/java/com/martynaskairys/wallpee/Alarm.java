@@ -1,4 +1,4 @@
-package com.martynaskairys.wallpee.testing;
+package com.martynaskairys.wallpee;
 
 
 import android.content.BroadcastReceiver;

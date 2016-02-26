@@ -1,58 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
 
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
+    android:background="#3F51B5">
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
+    <TextView
+        android:id="@+id/text_explaining_app_purpose"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/image_view"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/text_app_purpose"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        />
 
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="com.martynaskairys.wallpee.MainActivity">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_activity_small_text"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_below="@+id/text_explaining_app_purpose"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
 
-        <TextView
-            android:id="@+id/text_explaining_app_purpose"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/image_view"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="32dp"
-            android:paddingTop="16dp"
-            android:text="@string/text_app_purpose"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            />
+    <ImageView
+        android:id="@+id/image_view"
+        android:contentDescription="@string/this_is_company_logo_main_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="300dp"
+        android:maxWidth="200dp"
+        android:padding="0dp"
+        android:src="@drawable/wh5"/>
 
-        <Button
-            android:id="@+id/button_for_choosing_pic_folders"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_below="@+id/text_explaining_app_purpose"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:text="@string/show_me_the_pictures"/>
-
-        <ImageView
-            android:id="@+id/image_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:adjustViewBounds="true"
-            android:maxHeight="700dp"
-            android:maxWidth="500dp"
-            android:padding="0dp"
-            android:src="@drawable/mok"/>
+    <Button
+        android:id="@+id/button_for_choosing_pic_folders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/mybutton"
+        android:padding="16dp"
+        android:text="@string/show_me_the_pictures"
+        android:textColor="#ffffff"/>
 
 
-    </RelativeLayout>
 
-</ScrollView>
+
+</RelativeLayout>
+
+

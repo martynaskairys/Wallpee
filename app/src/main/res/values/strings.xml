@@ -1,24 +1,27 @@
 <resources>
     <string name="app_name">Wallpee</string>
-    <string name="text_explaining_folder_content_a">this is A content text</string>
-    <string name="folder_a">Folder: Set chosen picture as a wallpaper</string>
+    <string name="folder_a">get more daily motivation</string>
+    <string name="folder_b">live healthier life</string>
+    <string name="folder_c">be more positive</string>
+    <string name="text_explaining_folder_content_a">You decided to get more daily motivation. Great! Here are things that you should know</string>
+    <string name="text_explaining_folder_content_b">You decided to live healthier life. Great! Here are things that you should know</string>
+    <string name="text_explaining_folder_content_c">You decided to be more positive. Great! Here are things that you should know</string>
     <string name="choosing_folder">Choose folders you want to....</string>
     <string name="leaving_app">You are leaving this app....</string>
     <string name="yoo_message_a_folder">tamp aram :)</string>
     <string name="toast_message_superstar">You are about to change your LIFE for good</string>
-    <string name="text_app_purpose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut libero id est maximus hendrerit varius posuere augue. Quisque in augue enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi in lacus maximus urna tincidunt imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut libero id est maximus hendrerit varius posuere augue. Quisque in augue enim.</string>
-    <string name="show_me_the_pictures">Show me the pictures</string>
+    <string name="text_app_purpose">This app changes wallpapers on your device based on your chosen goal that you want to achieve</string>
+    <string name="show_me_the_pictures">Show me pictures</string>
     <string name="let_see_wallpapers_first">Check Wallpapers first</string>
     <string name="action_set_wallpaper">Set Wallpaper</string>
     <string name="back_to_Main">back_to_main</string>
-    <string name="folder_c">Folder: Choose Random Picture</string>
     <string name="choose_random_pic">Choose Random Pic</string>
     <string name="set_wallpaper">Set as Wallpaper</string>
     <string name="wallpaper_changed">Wallpaper successfully changed</string>
-    <string name="folder_b">this is folder B</string>
-    <string name="text_explaining_folder_content_b">This folder B is used for...</string>
     <string name="choose_new_folder">Choose New Folder</string>
-    <string name="ok_lets_do_it">Ok Let\'s do it</string>
+    <string name="ok_lets_do_it">OK Let\'s do it</string>
     <string name="do_you_like_your_new_wallpaper">"Do you like your new wallpaper "</string>
     <string name="alarm_set_from_device_boot_message">Alarm Set from device boot. Is it working?</string>
+    <string name="main_activity_small_text">We check mobile phones more than 237 times a day on average. If we do that, why don\'t we set our phones for a better use. </string>
+    <string name="this_is_company_logo_main_activity">This is company logo</string>
 </resources>

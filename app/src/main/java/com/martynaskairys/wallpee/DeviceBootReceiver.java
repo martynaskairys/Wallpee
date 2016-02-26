@@ -1,4 +1,4 @@
-package com.martynaskairys.wallpee.testing;
+package com.martynaskairys.wallpee;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 
-import com.martynaskairys.wallpee.R;
 
 /**
  *         <p/>
