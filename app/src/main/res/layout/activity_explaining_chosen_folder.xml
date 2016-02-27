@@ -8,7 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ExplainingChosenFolderActivity">
+    tools:context=".ExplainingChosenFolderActivity"
+    android:background="#3F51B5">
 
     <TextView
         android:id="@+id/text_explaining_folder_content"
@@ -28,13 +29,17 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="64dp"
-        android:text="@string/let_see_wallpapers_first"/>
+        android:padding="16dp"
+        android:text="@string/let_see_wallpapers_first"
+        android:background="#ff3f80"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Set Wallpaper Magic"
+        android:padding="16dp"
         android:id="@+id/buttonSettingContinousWallpaperChange"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:background="#ff3f80"/>
 </RelativeLayout>

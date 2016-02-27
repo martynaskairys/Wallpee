@@ -33,8 +33,8 @@ public class ChoosingFolderActivity extends AppCompatActivity {
 	}
 
 	private void setupFolderBButton() {
-		Button buttonA = (Button) findViewById(R.id.button_folder_b);
-		buttonA.setOnClickListener(new View.OnClickListener() {
+		Button buttonB = (Button) findViewById(R.id.button_folder_b);
+		buttonB.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				String folderB = getString(R.string.text_explaining_folder_content_b);
@@ -50,9 +50,12 @@ public class ChoosingFolderActivity extends AppCompatActivity {
 		buttonC.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(ChoosingFolderActivity.this, ChoosingRandomPicture.class);
+				String folderC = getString(R.string.text_explaining_folder_content_c);
+				Intent intent = new Intent(ChoosingFolderActivity.this, ExplainingChosenFolderActivity.class);
+				intent.putExtra(ExplainingChosenFolderActivity.EXPLANATION, folderC);
 				startActivity(intent);
 			}
 		});
 	}
+
 }

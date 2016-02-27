@@ -8,7 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.martynaskairys.wallpee.ExitAppActivity">
+    tools:context="com.martynaskairys.wallpee.ExitAppActivity"
+    android:background="#3F51B5">
 
     <TextView
         android:layout_width="wrap_content"
@@ -27,7 +28,8 @@
         android:id="@+id/buttonExitApp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="44dp"/>
+        android:layout_marginBottom="44dp"
+        android:background="#ff3f80"/>
 
     <ImageView
         android:layout_width="fill_parent"

@@ -45,36 +45,6 @@ import java.net.URL;
                 .load(imageUrl)
                 .into(imageView);
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add(R.string.set_wallpaper)
-                .setOnMenuItemClickListener(this.setWallpaperClickListener)
-                .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-        return super.onCreateOptionsMenu(menu);
-
-    }
-
-    private OnMenuItemClickListener setWallpaperClickListener = new OnMenuItemClickListener() {
-        public boolean onMenuItemClick(MenuItem item) {
-
-            WallpaperManager wpm = WallpaperManager.getInstance(PictureActivity.this);
-            try {
-
-                InputStream ins = new URL(imageUrl).openStream();
-                wpm.setStream(ins);
-
-                Toast.makeText(PictureActivity.this, R.string.wallpaper_changed, Toast.LENGTH_SHORT).show();
-
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-            }
-
-            return true;
-        }
-    };
-
-
-}
+     }
 
 

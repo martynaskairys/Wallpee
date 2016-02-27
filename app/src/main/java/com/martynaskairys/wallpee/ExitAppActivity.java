@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
-import com.martynaskairys.wallpee.testing.Alarm;
 
 
 public class ExitAppActivity extends AppCompatActivity {
