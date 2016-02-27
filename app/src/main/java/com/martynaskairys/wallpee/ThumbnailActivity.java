@@ -6,11 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.TextView;
 
 
 //Shows a list of pictures
 public class ThumbnailActivity extends AppCompatActivity {
-
 
     //Populates list items
     private RecyclerAdapter adapter;
@@ -21,7 +21,9 @@ public class ThumbnailActivity extends AppCompatActivity {
         setContentView(R.layout.thumbnail_activity);
 
         initRecyclerView();
-        showList(Links.IMAGE_URLS);
+
+        String[] IMAGE_URLS = getIntent().getStringArrayExtra("images");
+        showList(IMAGE_URLS);
 
         findViewById(R.id.buttonChooseNewFolder).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +42,7 @@ public class ThumbnailActivity extends AppCompatActivity {
             }
         });
     }
+
 
     private void initRecyclerView() {
         adapter = new RecyclerAdapter(getApplicationContext());
