@@ -8,31 +8,31 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.martynaskairys.wallpee.ChoosingRandomPicture">
+    tools:context="com.martynaskairys.wallpee.ExitAppActivity">
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="The Magic start at night. Have fun."
+        android:id="@+id/textExitApp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/mok"/>
+        android:layout_marginTop="150dp"/>
 
     <Button
-        android:id="@+id/buttonChooseRandomPicture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Exit App"
+        android:id="@+id/buttonExitApp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/choose_random_pic"/>
+        android:layout_marginBottom="44dp"/>
 
-    <Button
-        android:id="@+id/buttonSetRandomWallpaper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/choose_random_pic"
-        android:layout_alignTop="@+id/imageView2"
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
-
-
 </RelativeLayout>

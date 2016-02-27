@@ -16,4 +16,23 @@
         android:layout_height="match_parent"
         tools:listitem="@layout/list_item"/>
 
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_new_folder"
+        android:id="@+id/buttonChooseNewFolder"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/recycler_view"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ok_lets_do_it"
+        android:id="@+id/buttonDoIt"
+        android:layout_below="@+id/buttonChooseNewFolder"
+        android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>
