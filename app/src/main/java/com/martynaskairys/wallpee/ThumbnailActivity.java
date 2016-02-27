@@ -1,31 +1,18 @@
 package com.martynaskairys.wallpee;
 
-import android.app.WallpaperManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.squareup.picasso.Picasso;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-
-/**
- * Shows a list of pictures
- */
+//Shows a list of pictures
 public class ThumbnailActivity extends AppCompatActivity {
 
-    /**
-     * Populates list items
-     */
+
+    //Populates list items
     private RecyclerAdapter adapter;
 
     @Override
@@ -61,9 +48,8 @@ public class ThumbnailActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
-    /**
-     * Shows list of images
-     */
+
+    //Shows list of images
     private void showList(String[] imageUrls) {
         adapter.setData(imageUrls);
     }

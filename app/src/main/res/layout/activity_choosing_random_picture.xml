@@ -26,13 +26,5 @@
         android:layout_centerHorizontal="true"
         android:text="@string/choose_random_pic"/>
 
-    <Button
-        android:id="@+id/buttonSetRandomWallpaper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/choose_random_pic"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_centerHorizontal="true"/>
-
 
 </RelativeLayout>
