@@ -10,53 +10,59 @@ import android.widget.TextView;
 
 public class ExplainingChosenFolderActivity extends AppCompatActivity {
 
-	public static final String EXPLANATION = "explanation";
+    public static final String EXPLANATION = "explanation";
 
-	@Override
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_explaining_chosen_folder);
 
-		setExplanation();
-		setConfirmationButton();
-		setStartChangingWallpapersButton();
-
+        setExplanationText();
+        setTakeAPeakAtWallpapersFirstButton();
+        setStartChangingWallpapersButton();
 
     }
 
-private void setStartChangingWallpapersButton(){
+    private void setExplanationText() {
+        TextView textExplainingFolderChoice = (TextView) findViewById(R.id.text_explaining_folder_content);
 
-	findViewById(R.id.buttonSettingContinousWallpaperChange).setOnClickListener(new View.OnClickListener() {
-		@Override
-		public void onClick(View v) {
-			Intent intent = new Intent(ExplainingChosenFolderActivity.this, ExitAppActivity.class);
-			startActivity(intent);
-		}
-	});
+        Intent intent = getIntent();
+        Bundle b = intent.getExtras();
 
-}
+        if (b != null) {
+            String j = (String) b.get(EXPLANATION);
+            textExplainingFolderChoice.setText(j);
+        }
+    }
 
-	private void setConfirmationButton() {
-		Button buttonF = (Button) findViewById(R.id.button_ok);
-		buttonF.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(ExplainingChosenFolderActivity.this, ThumbnailActivity.class);
-				startActivity(intent);
+    private void setTakeAPeakAtWallpapersFirstButton() {
+        Button buttonF = (Button) findViewById(R.id.button_ok);
 
-			}
-		});
-	}
+        final String[] IMAGE_URLS = getIntent().getStringArrayExtra("images");
 
-	private void setExplanation() {
-		TextView textExplainingFolderChoice = (TextView) findViewById(R.id.text_explaining_folder_content);
+        buttonF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-		Intent intent = getIntent();
-		Bundle b = intent.getExtras();
+                Intent i = new Intent(ExplainingChosenFolderActivity.this, ThumbnailActivity.class);
+                i.putExtra("images", IMAGE_URLS);
+                startActivity(i);
 
-		if (b != null) {
-			String j = (String) b.get(EXPLANATION);
-			textExplainingFolderChoice.setText(j);
-		}
-	}
+            }
+        });
+    }
+
+    private void setStartChangingWallpapersButton() {
+
+        findViewById(R.id.buttonSettingContinousWallpaperChange).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ExplainingChosenFolderActivity.this, ExitAppActivity.class);
+                startActivity(intent);
+            }
+        });
+
+    }
+
 }

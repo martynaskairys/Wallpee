@@ -31,7 +31,7 @@ public class WallpaperService extends IntentService {
         WallpaperManager wpm = WallpaperManager.getInstance(context);
         try {
 
-            InputStream ins = new URL(mPictures.getRandomPictureUrl()).openStream();
+            InputStream ins = new URL(mPictures.getRandomPictureUrlA()).openStream();
             wpm.setStream(ins);
 
         } catch (IOException e) {
