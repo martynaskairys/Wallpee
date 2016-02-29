@@ -54,11 +54,9 @@ public class WallpaperService extends IntentService {
 	}
 
 	private String getRandomUrl(Set<String> urls) {
-
 		Random randomGenerator = new Random();
 		int randomNumber = randomGenerator.nextInt(urls.size());
-		String[] urlsArray = (String[]) urls.toArray();
-		return urlsArray[randomNumber];
+		return (String) urls.toArray()[randomNumber];
 	}
 
 }

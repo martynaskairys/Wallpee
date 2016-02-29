@@ -54,12 +54,13 @@ public class ExitAppActivity extends AppCompatActivity {
 	}
 
 	private void saveUrls() {
-		Set<String> strings = new HashSet<>();
-		Collections.addAll(strings, imageUrls);
+		Set<String> urlsSet = new HashSet<>();
+		Collections.addAll(urlsSet, imageUrls);
 
-		SharedPreferences name = getSharedPreferences(STANDARD, Context.MODE_PRIVATE);
-		SharedPreferences.Editor edit = name.edit();
-		edit.putStringSet(CHOSEN_FOLDER_URLS, strings);
+		SharedPreferences preferences = getSharedPreferences(STANDARD, Context.MODE_PRIVATE);
+		SharedPreferences.Editor edit = preferences.edit();
+		edit.putStringSet(CHOSEN_FOLDER_URLS, urlsSet);
+		edit.commit();
 	}
 
 	public String getRandomPictureUrl() {
