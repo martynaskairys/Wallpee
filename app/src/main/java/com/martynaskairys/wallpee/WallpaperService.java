@@ -30,6 +30,11 @@ public class WallpaperService extends IntentService {
 	public void changeRandomly(Context context) {
 
 		Set<String> urls = getSavedUrls();
+
+		if (urls == null) {
+			return;
+		}
+
 		String randomUrl = getRandomUrl(urls);
 
 		WallpaperManager wpm = WallpaperManager.getInstance(context);
