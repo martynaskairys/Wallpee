@@ -11,12 +11,6 @@ import android.widget.Button;
  */
 public class ChoosingFolderActivity extends AppCompatActivity {
 
-    public static String[] IMAGE_URLS_B = {
-
-            "http://oi44.tinypic.com/9asbk3.jpg",
-            "http://oi42.tinypic.com/n682rm.jpg"
-    };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

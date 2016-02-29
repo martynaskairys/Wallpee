@@ -9,15 +9,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.Random;
+
 
 public class ExitAppActivity extends AppCompatActivity {
 
     private PendingIntent pendingIntent;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exit_app);
+
+        getRandomPictureUrl();
 
          /* Retrieve a PendingIntent that will perform a broadcast */
         Intent alarmIntent = new Intent(ExitAppActivity.this, Alarm.class);
@@ -37,6 +42,16 @@ public class ExitAppActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public String getRandomPictureUrl() {
+
+        String[] IMAGE_URLS = getIntent().getStringArrayExtra("images");
+
+        Random randomGenerator = new Random();
+        int randomNumber = randomGenerator.nextInt(IMAGE_URLS.length);
+
+        return IMAGE_URLS[randomNumber];
     }
 
     public void SetWallpapersToWork() {

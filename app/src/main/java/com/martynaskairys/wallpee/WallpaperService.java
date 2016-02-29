@@ -8,11 +8,12 @@ import android.content.Intent;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.Random;
 
 
 public class WallpaperService extends IntentService {
 
-    private Links mPictures = new Links();
+    private ExitAppActivity mPictures = new ExitAppActivity();
 
     public WallpaperService() {
         super("martynas_notification_service");
@@ -31,7 +32,7 @@ public class WallpaperService extends IntentService {
         WallpaperManager wpm = WallpaperManager.getInstance(context);
         try {
 
-            InputStream ins = new URL(mPictures.getRandomPictureUrlA()).openStream();
+            InputStream ins = new URL(mPictures.getRandomPictureUrl()).openStream();
             wpm.setStream(ins);
 
         } catch (IOException e) {
