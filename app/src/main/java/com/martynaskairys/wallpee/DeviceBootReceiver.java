@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 /**
  *         <p/>
- *         Broadcast reciever, starts when the device gets starts.
+ *         Broadcast receiver, starts when the device gets starts.
  *         Start your repeating alarm here.
  */
 public class DeviceBootReceiver extends BroadcastReceiver {
@@ -19,7 +19,7 @@ public class DeviceBootReceiver extends BroadcastReceiver {
         if (intent.getAction().equals("android.intent.action.BOOT_COMPLETED")) {
 
             /* Setting the alarm here */
-            Intent alarmIntent = new Intent(context, Alarm.class);
+            Intent alarmIntent = new Intent(context, AlarmReceiver.class);
             PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, 0);
 
             AlarmManager manager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);

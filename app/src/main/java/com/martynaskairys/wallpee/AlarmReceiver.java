@@ -4,12 +4,9 @@ package com.martynaskairys.wallpee;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Vibrator;
 import android.widget.Toast;
-import com.martynaskairys.wallpee.R;
-import com.martynaskairys.wallpee.WallpaperService;
 
-public class Alarm extends BroadcastReceiver {
+public class AlarmReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
