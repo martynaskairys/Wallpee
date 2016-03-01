@@ -17,10 +17,6 @@ public class Alarm extends BroadcastReceiver {
         // For our recurring task, we'll just display a message
         Toast.makeText(context, R.string.do_you_like_your_new_wallpaper, Toast.LENGTH_LONG).show();
 
-        //and let phone vibrate
-        Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        vibrator.vibrate(2000);
-
         //execute wallpaper service (change wallpapers randomly)
         Intent serviceIntent = new Intent(context, WallpaperService.class);
         context.startService(serviceIntent);
