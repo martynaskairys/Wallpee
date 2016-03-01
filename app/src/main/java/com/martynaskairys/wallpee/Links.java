@@ -1,7 +1,5 @@
 package com.martynaskairys.wallpee;
 
-import java.util.Random;
-
 public class Links {
 
     public static String[] IMAGE_URLS_A = {
@@ -23,29 +21,5 @@ public class Links {
             "https://app.box.com/representation/file_version_55089755065/image_2048_jpg/1.jpg?shared_name=ko3y2zo5wlsu6qvq8q2bx81xwz9bv7o3",
             "http://oi41.tinypic.com/sdfewy.jpg"
     };
-
-    public String getRandomPictureUrlA() {
-
-        Random randomGenerator = new Random();
-        int randomNumber = randomGenerator.nextInt(IMAGE_URLS_A.length);
-
-        return IMAGE_URLS_A[randomNumber];
-    }
-
-    public String getRandomPictureUrlB() {
-
-        Random randomGenerator = new Random();
-        int randomNumber = randomGenerator.nextInt(IMAGE_URLS_B.length);
-
-        return IMAGE_URLS_B[randomNumber];
-    }
-
-    public String getRandomPictureUrlC() {
-
-        Random randomGenerator = new Random();
-        int randomNumber = randomGenerator.nextInt(IMAGE_URLS_C.length);
-
-        return IMAGE_URLS_C[randomNumber];
-    }
 
 }

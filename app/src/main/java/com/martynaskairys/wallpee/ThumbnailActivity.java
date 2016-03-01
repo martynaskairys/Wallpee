@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.TextView;
-
 
 //Shows a list of pictures
 public class ThumbnailActivity extends AppCompatActivity {
@@ -37,7 +35,12 @@ public class ThumbnailActivity extends AppCompatActivity {
         findViewById(R.id.buttonDoIt).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                final String[] IMAGE_URLS = getIntent().getStringArrayExtra("images");
+
                 Intent intent = new Intent(ThumbnailActivity.this, ExitAppActivity.class);
+                intent.putExtra("images", IMAGE_URLS);
+
                 startActivity(intent);
             }
         });

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -37,17 +36,15 @@ public class ExplainingChosenFolderActivity extends AppCompatActivity {
     }
 
     private void setTakeAPeakAtWallpapersFirstButton() {
-        Button buttonF = (Button) findViewById(R.id.button_ok);
 
         final String[] IMAGE_URLS = getIntent().getStringArrayExtra("images");
 
-        buttonF.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.button_ok).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent i = new Intent(ExplainingChosenFolderActivity.this, ThumbnailActivity.class);
-                i.putExtra("images", IMAGE_URLS);
-                startActivity(i);
+                Intent intent = new Intent(ExplainingChosenFolderActivity.this, ThumbnailActivity.class);
+                intent.putExtra("images", IMAGE_URLS);
+                startActivity(intent);
 
             }
         });
@@ -55,10 +52,13 @@ public class ExplainingChosenFolderActivity extends AppCompatActivity {
 
     private void setStartChangingWallpapersButton() {
 
+        final String[] IMAGE_URLS = getIntent().getStringArrayExtra("images");
+
         findViewById(R.id.buttonSettingContinousWallpaperChange).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ExplainingChosenFolderActivity.this, ExitAppActivity.class);
+                intent.putExtra("images", IMAGE_URLS);
                 startActivity(intent);
             }
         });
