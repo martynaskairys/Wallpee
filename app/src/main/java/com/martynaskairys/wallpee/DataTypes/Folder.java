@@ -14,4 +14,12 @@ public class Folder {
 		this.title = title;
 		this.urls = urls;
 	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public List<String> getUrls() {
+		return urls;
+	}
 }

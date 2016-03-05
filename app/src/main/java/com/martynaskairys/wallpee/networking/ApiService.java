@@ -1,9 +1,8 @@
 package com.martynaskairys.wallpee.networking;
 
-import android.database.Observable;
-
 import com.martynaskairys.wallpee.DataTypes.FoldersResponse;
 
+import retrofit.Callback;
 import retrofit.http.GET;
 
 /**
@@ -11,7 +10,7 @@ import retrofit.http.GET;
  */
 public interface ApiService {
 
-	@GET ("/s/nscp7b6qiuguearszwefw7hvtmkt29aj")
-	Observable<FoldersResponse> getFolders();
+	@GET ("/document/d/16hS5yqkQTvvhrvRqHcSs9YdpCnilIoJH3F5kQMR2HYY/edit?usp=sharing")
+	void getFolders(Callback<FoldersResponse> callback);
 
 }

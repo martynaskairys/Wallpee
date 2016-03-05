@@ -12,4 +12,8 @@ public class FoldersResponse {
 	public FoldersResponse(List<Folder> folders) {
 		this.folders = folders;
 	}
+
+	public List<Folder> getFolders() {
+		return folders;
+	}
 }
