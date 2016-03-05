@@ -2,6 +2,7 @@ package com.martynaskairys.wallpee;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +29,7 @@ public class ChoosingFolderActivity extends AppCompatActivity {
 	private Button buttonA;
 	private Button buttonB;
 	private Button buttonC;
+	private ViewGroup rootView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class ChoosingFolderActivity extends AppCompatActivity {
 	}
 
 	private void findViews() {
+		rootView = (ViewGroup) findViewById(R.id.root);
 		content = (ViewGroup) findViewById(R.id.content);
 		progressBar = (ProgressBar) findViewById(R.id.progress_bar);
 		buttonA = (Button) findViewById(R.id.button_folder_a);
@@ -60,9 +63,21 @@ public class ChoosingFolderActivity extends AppCompatActivity {
 
 			@Override
 			public void failure(RetrofitError error) {
-				showContentOnly();
+				showRetryButtonOnly();
 			}
 		});
+	}
+
+	private void showRetryButtonOnly() {
+		content.setVisibility(View.INVISIBLE);
+		progressBar.setVisibility(View.INVISIBLE);
+
+		Snackbar.make(rootView, R.string.something_not_right, Snackbar.LENGTH_INDEFINITE).setAction(R.string.retry, new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				fetchImageUrlsAndUpdateUiAccordingly();
+			}
+		}).show();
 	}
 
 	private void showContentOnly() {
