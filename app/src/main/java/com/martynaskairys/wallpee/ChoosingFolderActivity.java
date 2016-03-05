@@ -113,28 +113,28 @@ public class ChoosingFolderActivity extends AppCompatActivity {
 		return strings;
 	}
 
-	private void setupFolderAButton(final String[] images) {
+	private void setupFolderAButton(final String[] urlsFolderA) {
 		buttonA.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				String folderA = getString(R.string.text_explaining_folder_content_a);
 				Intent intent = new Intent(ChoosingFolderActivity.this, ExplainingChosenFolderActivity.class);
 				intent.putExtra(ExplainingChosenFolderActivity.EXPLANATION, folderA);
-				intent.putExtra("images", images);
+				intent.putExtra("images", urlsFolderA);
 
 				startActivity(intent);
 			}
 		});
 	}
 
-	private void setupFolderBButton(final String[] images) {
+	private void setupFolderBButton(final String[] urlsFolderB) {
 		buttonB.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				String folderB = getString(R.string.text_explaining_folder_content_b);
 				Intent intent = new Intent(ChoosingFolderActivity.this, ExplainingChosenFolderActivity.class);
 				intent.putExtra(ExplainingChosenFolderActivity.EXPLANATION, folderB);
-				intent.putExtra("images", images);
+				intent.putExtra("images", urlsFolderB);
 
 				startActivity(intent);
 
@@ -142,14 +142,14 @@ public class ChoosingFolderActivity extends AppCompatActivity {
 		});
 	}
 
-	private void setupFolderCButton(final String[] images) {
+	private void setupFolderCButton(final String[] urlsFolderC) {
 		buttonC.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				String folderC = getString(R.string.text_explaining_folder_content_c);
 				Intent intent = new Intent(ChoosingFolderActivity.this, ExplainingChosenFolderActivity.class);
 				intent.putExtra(ExplainingChosenFolderActivity.EXPLANATION, folderC);
-				intent.putExtra("images", images);
+				intent.putExtra("images", urlsFolderC);
 
 				startActivity(intent);
 			}

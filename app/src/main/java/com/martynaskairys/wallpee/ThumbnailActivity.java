@@ -20,8 +20,8 @@ public class ThumbnailActivity extends AppCompatActivity {
 
         initRecyclerView();
 
-        String[] images = getIntent().getStringArrayExtra("images");
-        showList(images);
+        String[] IMAGES = getIntent().getStringArrayExtra("images");
+        showList(IMAGES);
 
         findViewById(R.id.buttonChooseNewFolder).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,10 +36,10 @@ public class ThumbnailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                final String[] images = getIntent().getStringArrayExtra("images");
+                final String[] IMAGES = getIntent().getStringArrayExtra("images");
 
                 Intent intent = new Intent(ThumbnailActivity.this, ExitAppActivity.class);
-                intent.putExtra("images", images);
+                intent.putExtra("images", IMAGES);
 
                 startActivity(intent);
             }
