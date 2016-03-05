@@ -47,7 +47,6 @@ public class ExitAppActivity extends AppCompatActivity {
 				Toast.makeText(ExitAppActivity.this, R.string.exit_app_button_message, Toast.LENGTH_LONG).show();
 			}
 		});
-
 	}
 
 	private void saveUrls() {
@@ -57,7 +56,7 @@ public class ExitAppActivity extends AppCompatActivity {
 		SharedPreferences preferences = getSharedPreferences(STANDARD, Context.MODE_PRIVATE);
 		SharedPreferences.Editor edit = preferences.edit();
 		edit.putStringSet(CHOSEN_FOLDER_URLS, urlsSet);
-		edit.commit();
+		edit.apply();
 	}
 
 	public String getRandomPictureUrl() {
