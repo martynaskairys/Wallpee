@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 
 import com.martynaskairys.wallpee.DataTypes.Folder;
-import com.martynaskairys.wallpee.DataTypes.FoldersResponse;
 import com.martynaskairys.wallpee.networking.ApiService;
 import com.martynaskairys.wallpee.networking.RetrofitSetup;
 
@@ -31,13 +30,13 @@ public class ChoosingFolderActivity extends AppCompatActivity {
 	private Button buttonC;
 
 	@Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choosing_folder);
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_choosing_folder);
 		findViews();
 
 		fetchImageUrlsAndUpdateUiAccordingly();
-    }
+	}
 
 	private void findViews() {
 		content = (ViewGroup) findViewById(R.id.content);
@@ -52,10 +51,10 @@ public class ChoosingFolderActivity extends AppCompatActivity {
 		showProgressBarOnly();
 
 		ApiService service = new RetrofitSetup().getService();
-		service.getFolders(new Callback<FoldersResponse>() {
+		service.getFolders(new Callback<List<Folder>>() {
 			@Override
-			public void success(FoldersResponse foldersResponse, Response response) {
-				setupButtons(foldersResponse.getFolders());
+			public void success(List<Folder> folders, Response response) {
+				setupButtons(folders);
 				showContentOnly();
 			}
 
@@ -83,8 +82,8 @@ public class ChoosingFolderActivity extends AppCompatActivity {
 		String[] urlsFolderC = toArray(folders.get(2));
 
 		setupFolderAButton(urlsFolderA);
-        setupFolderBButton(urlsFolderB);
-        setupFolderCButton(urlsFolderC);
+		setupFolderBButton(urlsFolderB);
+		setupFolderCButton(urlsFolderC);
 	}
 
 	private String[] toArray(Folder folder) {
@@ -100,7 +99,7 @@ public class ChoosingFolderActivity extends AppCompatActivity {
 	}
 
 	private void setupFolderAButton(final String[] images) {
-        buttonA.setOnClickListener(new View.OnClickListener() {
+		buttonA.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				String folderA = getString(R.string.text_explaining_folder_content_a);
@@ -111,10 +110,10 @@ public class ChoosingFolderActivity extends AppCompatActivity {
 				startActivity(intent);
 			}
 		});
-    }
+	}
 
-    private void setupFolderBButton(final String[] images) {
-        buttonB.setOnClickListener(new View.OnClickListener() {
+	private void setupFolderBButton(final String[] images) {
+		buttonB.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				String folderB = getString(R.string.text_explaining_folder_content_b);
@@ -126,10 +125,10 @@ public class ChoosingFolderActivity extends AppCompatActivity {
 
 			}
 		});
-    }
+	}
 
-    private void setupFolderCButton(final String[] images) {
-        buttonC.setOnClickListener(new View.OnClickListener() {
+	private void setupFolderCButton(final String[] images) {
+		buttonC.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				String folderC = getString(R.string.text_explaining_folder_content_c);
@@ -140,6 +139,6 @@ public class ChoosingFolderActivity extends AppCompatActivity {
 				startActivity(intent);
 			}
 		});
-    }
+	}
 
 }
