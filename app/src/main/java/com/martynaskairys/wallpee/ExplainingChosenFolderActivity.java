@@ -37,13 +37,13 @@ public class ExplainingChosenFolderActivity extends AppCompatActivity {
 
     private void setTakeAPeakAtWallpapersFirstButton() {
 
-        final String[] IMAGE_URLS = getIntent().getStringArrayExtra("images");
+        final String[] images = getIntent().getStringArrayExtra("images");
 
         findViewById(R.id.button_ok).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ExplainingChosenFolderActivity.this, ThumbnailActivity.class);
-                intent.putExtra("images", IMAGE_URLS);
+                intent.putExtra("images", images);
                 startActivity(intent);
 
             }
@@ -52,13 +52,13 @@ public class ExplainingChosenFolderActivity extends AppCompatActivity {
 
     private void setStartChangingWallpapersButton() {
 
-        final String[] IMAGE_URLS = getIntent().getStringArrayExtra("images");
+        final String[] images = getIntent().getStringArrayExtra("images");
 
         findViewById(R.id.buttonSettingContinousWallpaperChange).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ExplainingChosenFolderActivity.this, ExitAppActivity.class);
-                intent.putExtra("images", IMAGE_URLS);
+                intent.putExtra("images", images);
                 startActivity(intent);
             }
         });

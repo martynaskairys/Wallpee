@@ -25,4 +25,6 @@
     <string name="main_activity_small_text">We check mobile phones more than 237 times a day on average. If we do that, why don\'t we set our phones for a better use. </string>
     <string name="this_is_company_logo_main_activity">This is company logo</string>
     <string name="exit_app_button_message">Have a nice day</string>
+    <string name="something_not_right">Something not right</string>
+    <string name="retry">Retry</string>
 </resources>
