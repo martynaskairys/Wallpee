@@ -50,14 +50,14 @@ public class ThumbnailActivity extends AppCompatActivity {
     private void initRecyclerView() {
         adapter = new RecyclerAdapter(getApplicationContext());
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
         recyclerView.setAdapter(adapter);
     }
 
 
     //Shows list of images
-    private void showList(String[] imageUrls) {
-        adapter.setData(imageUrls);
+    private void showList(String[] IMAGES) {
+        adapter.setData(IMAGES);
     }
 
 }
