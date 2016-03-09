@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import com.martynaskairys.wallpee.DataTypes.Folder;
 import com.martynaskairys.wallpee.networking.ApiService;
 import com.martynaskairys.wallpee.networking.RetrofitSetup;
+import com.martynaskairys.wallpee.utils.Utils;
 
 import java.util.List;
 
@@ -31,13 +32,26 @@ public class ChoosingFolderActivity extends AppCompatActivity {
     private Button buttonC;
     private ViewGroup rootView;
 
+    public static final String PREF_USER_FIRST_TIME = "user_first_time";
+    boolean isUserFirstTime;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Checks if user is first time here
+        isUserFirstTime = Boolean.valueOf(Utils.readSharedSetting(ChoosingFolderActivity.this, PREF_USER_FIRST_TIME, "true"));
+        Intent introIntent = new Intent(ChoosingFolderActivity.this, PagerActivity.class);
+        introIntent.putExtra(PREF_USER_FIRST_TIME, isUserFirstTime);
+        if (isUserFirstTime) {
+            startActivity(introIntent);
+        }
+
         setContentView(R.layout.activity_choosing_folder);
         findViews();
 
         fetchImageUrlsAndUpdateUiAccordingly();
+
     }
 
     private void findViews() {
