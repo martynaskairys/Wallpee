@@ -42,6 +42,11 @@
     </string>
     <string name="something_not_right">something is not right</string>
     <string name="retry">retry</string>
+    <string name="choice_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit</string>
+    <string name="choice_2">Etiam rhoncus scelerisque porta</string>
+    <string name="choice_3">Maecenas pulvinar dui eget nibh luctus maximus</string>
+    <string name="exit_app_textview_text">The Magic start at night. Have fun.</string>
+    <string name="exit_app_button_text">Exit App</string>
 
 
 </resources>

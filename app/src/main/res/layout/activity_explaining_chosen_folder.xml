@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ExplainingChosenFolderActivity"
-    android:background="#3F51B5">
+    >
 
     <TextView
         android:id="@+id/text_explaining_folder_content"
@@ -26,7 +26,7 @@
         android:padding="16dp"
         android:layout_marginBottom="16dp"
         android:text="@string/let_see_wallpapers_first"
-        android:background="#ff3f80" android:layout_alignParentBottom="true"
+         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>
 
     <ImageView
