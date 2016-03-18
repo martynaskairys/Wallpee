@@ -13,7 +13,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-                android:theme="@style/Theme.AppCompat.NoActionBar">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
@@ -23,13 +23,17 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ChoosingFolderActivity">
+        <activity android:name=".ChoosingFolderActivity"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".ExplainingChosenFolderActivity">
+        <activity android:name=".ExplainingChosenFolderActivity"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".PictureActivity">
+        <activity android:name=".PictureActivity"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".ThumbnailActivity"/>
+        <activity android:name=".ThumbnailActivity"
+                  android:screenOrientation="portrait"/>
 
         <receiver android:name=".DeviceBootReceiver">
             <intent-filter>
@@ -39,7 +43,9 @@
         <receiver android:name=".AlarmReceiver">
         </receiver>
 
-        <activity android:name=".ExitAppActivity">
+        <activity android:name=".ExitAppActivity"
+                  android:screenOrientation="portrait">
+
         </activity>
 
         <service android:name=".WallpaperService"></service>

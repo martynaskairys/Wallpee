@@ -18,26 +18,26 @@ import java.util.Set;
 
 public class ExitAppActivity extends AppCompatActivity {
 
-	public static final String CHOSEN_FOLDER_URLS = "chosen_folder_urls";
-	public static final String STANDARD = "standard";
-	private PendingIntent pendingIntent;
-	private String[] imageUrls;
+    public static final String CHOSEN_FOLDER_URLS = "chosen_folder_urls";
+    public static final String STANDARD = "standard";
+    private PendingIntent pendingIntent;
+    private String[] imageUrls;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exit_app);
 
-        saveUrls();
         getRandomPictureUrl();
-        setWallpapersToWork();
 
          /* Retrieve a PendingIntent that will perform a broadcast */
         Intent alarmIntent = new Intent(ExitAppActivity.this, AlarmReceiver.class);
         pendingIntent = PendingIntent.getBroadcast(ExitAppActivity.this, 0, alarmIntent, 0);
 
+        setWallpapersToWork();
 
         findViewById(R.id.buttonExitApp).setOnClickListener(new View.OnClickListener() {
+
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(Intent.ACTION_MAIN);
@@ -60,6 +60,7 @@ public class ExitAppActivity extends AppCompatActivity {
 	}
 
 	public String getRandomPictureUrl() {
+
 
         imageUrls = getIntent().getStringArrayExtra("images");
         Random randomGenerator = new Random();
