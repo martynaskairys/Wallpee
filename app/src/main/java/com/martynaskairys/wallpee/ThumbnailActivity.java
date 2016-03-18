@@ -20,8 +20,8 @@ public class ThumbnailActivity extends AppCompatActivity {
 
         initRecyclerView();
 
-        String[] IMAGE_URLS = getIntent().getStringArrayExtra("images");
-        showList(IMAGE_URLS);
+        String[] IMAGES = getIntent().getStringArrayExtra("images");
+        showList(IMAGES);
 
         findViewById(R.id.buttonChooseNewFolder).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,10 +36,10 @@ public class ThumbnailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                final String[] IMAGE_URLS = getIntent().getStringArrayExtra("images");
+                final String[] IMAGES = getIntent().getStringArrayExtra("images");
 
                 Intent intent = new Intent(ThumbnailActivity.this, ExitAppActivity.class);
-                intent.putExtra("images", IMAGE_URLS);
+                intent.putExtra("images", IMAGES);
 
                 startActivity(intent);
             }
@@ -50,14 +50,14 @@ public class ThumbnailActivity extends AppCompatActivity {
     private void initRecyclerView() {
         adapter = new RecyclerAdapter(getApplicationContext());
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
         recyclerView.setAdapter(adapter);
     }
 
 
     //Shows list of images
-    private void showList(String[] imageUrls) {
-        adapter.setData(imageUrls);
+    private void showList(String[] IMAGES) {
+        adapter.setData(IMAGES);
     }
 
 }

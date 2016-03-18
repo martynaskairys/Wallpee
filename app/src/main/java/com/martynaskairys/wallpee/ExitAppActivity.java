@@ -18,10 +18,10 @@ import java.util.Set;
 
 public class ExitAppActivity extends AppCompatActivity {
 
-    public static final String CHOSEN_FOLDER_URLS = "chosen_folder_urls";
-    public static final String STANDARD = "standard";
-    private PendingIntent pendingIntent;
-    private String[] imageUrls;
+	public static final String CHOSEN_FOLDER_URLS = "chosen_folder_urls";
+	public static final String STANDARD = "standard";
+	private PendingIntent pendingIntent;
+	private String[] imageUrls;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +36,8 @@ public class ExitAppActivity extends AppCompatActivity {
 
         setWallpapersToWork();
 
-        findViewById(R.id.buttonExitApp).setOnClickListener(new View.OnClickListener() {
 
+        findViewById(R.id.buttonExitApp).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(Intent.ACTION_MAIN);
@@ -47,7 +47,10 @@ public class ExitAppActivity extends AppCompatActivity {
 				Toast.makeText(ExitAppActivity.this, R.string.exit_app_button_message, Toast.LENGTH_LONG).show();
 			}
 		});
-	}
+
+        saveUrls();
+
+    }
 
 	private void saveUrls() {
 		Set<String> urlsSet = new HashSet<>();
