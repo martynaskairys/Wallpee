@@ -37,30 +37,30 @@ public class ExitAppActivity extends AppCompatActivity {
         setWallpapersToWork();
 
         findViewById(R.id.buttonExitApp).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.addCategory(Intent.CATEGORY_HOME);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-                Toast.makeText(ExitAppActivity.this, R.string.exit_app_button_message, Toast.LENGTH_LONG).show();
-            }
-        });
 
-        saveUrls();
-    }
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(Intent.ACTION_MAIN);
+				intent.addCategory(Intent.CATEGORY_HOME);
+				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				startActivity(intent);
+				Toast.makeText(ExitAppActivity.this, R.string.exit_app_button_message, Toast.LENGTH_LONG).show();
+			}
+		});
+	}
 
-    private void saveUrls() {
-        Set<String> urlsSet = new HashSet<>();
-        Collections.addAll(urlsSet, imageUrls);
+	private void saveUrls() {
+		Set<String> urlsSet = new HashSet<>();
+		Collections.addAll(urlsSet, imageUrls);
 
-        SharedPreferences preferences = getSharedPreferences(STANDARD, Context.MODE_PRIVATE);
-        SharedPreferences.Editor edit = preferences.edit();
-        edit.putStringSet(CHOSEN_FOLDER_URLS, urlsSet);
-        edit.commit();
-    }
+		SharedPreferences preferences = getSharedPreferences(STANDARD, Context.MODE_PRIVATE);
+		SharedPreferences.Editor edit = preferences.edit();
+		edit.putStringSet(CHOSEN_FOLDER_URLS, urlsSet);
+		edit.apply();
+	}
 
-    public String getRandomPictureUrl() {
+	public String getRandomPictureUrl() {
+
 
         imageUrls = getIntent().getStringArrayExtra("images");
         Random randomGenerator = new Random();

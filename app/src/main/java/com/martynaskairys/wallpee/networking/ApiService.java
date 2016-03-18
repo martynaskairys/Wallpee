@@ -1,6 +1,8 @@
 package com.martynaskairys.wallpee.networking;
 
-import com.martynaskairys.wallpee.DataTypes.FoldersResponse;
+import com.martynaskairys.wallpee.DataTypes.Folder;
+
+import java.util.List;
 
 import retrofit.Callback;
 import retrofit.http.GET;
@@ -10,7 +12,7 @@ import retrofit.http.GET;
  */
 public interface ApiService {
 
-	@GET ("/document/d/16hS5yqkQTvvhrvRqHcSs9YdpCnilIoJH3F5kQMR2HYY/edit?usp=sharing")
-	void getFolders(Callback<FoldersResponse> callback);
+	@GET ("/folders.json.json")
+	void getFolders(Callback<List<Folder>> callback);
 
 }

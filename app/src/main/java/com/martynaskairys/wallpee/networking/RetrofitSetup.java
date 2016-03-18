@@ -7,7 +7,7 @@ import retrofit.RestAdapter;
 /** Prepares Retrofit to be used */
 public class RetrofitSetup {
 
-	private static final String BASE_URL = "https://docs.google.com/";
+	private static final String BASE_URL = "http://pictex.orgfree.com/";
 
 	/** Returns {@link ApiService} which allows making API calls */
 	public ApiService getService() {
