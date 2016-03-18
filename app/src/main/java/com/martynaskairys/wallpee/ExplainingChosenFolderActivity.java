@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -11,15 +12,23 @@ public class ExplainingChosenFolderActivity extends AppCompatActivity {
 
     public static final String EXPLANATION = "explanation";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_explaining_chosen_folder);
 
+        setPicture();
         setExplanationText();
         setTakeAPeakAtWallpapersFirstButton();
-        setStartChangingWallpapersButton();
+
+    }
+
+    private void setPicture() {
+
+        ImageView v = (ImageView) findViewById(R.id.imageView2);
+        Bundle bundle = this.getIntent().getExtras();
+        int pic = bundle.getInt("image");
+        v.setImageResource(pic);
 
     }
 
@@ -49,20 +58,4 @@ public class ExplainingChosenFolderActivity extends AppCompatActivity {
             }
         });
     }
-
-    private void setStartChangingWallpapersButton() {
-
-        final String[] IMAGES = getIntent().getStringArrayExtra("images");
-
-        findViewById(R.id.buttonSettingContinousWallpaperChange).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ExplainingChosenFolderActivity.this, ExitAppActivity.class);
-                intent.putExtra("images", IMAGES);
-                startActivity(intent);
-            }
-        });
-
-    }
-
 }
