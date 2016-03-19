@@ -8,10 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 
 import com.martynaskairys.wallpee.DataTypes.Folder;
 import com.martynaskairys.wallpee.networking.ApiService;
 import com.martynaskairys.wallpee.networking.RetrofitSetup;
+import com.martynaskairys.wallpee.utils.Utils;
 
 import java.util.List;
 
@@ -30,23 +32,48 @@ public class ChoosingFolderActivity extends AppCompatActivity {
     private Button buttonB;
     private Button buttonC;
     private ViewGroup rootView;
+    private RelativeLayout rl;
+    private RelativeLayout r2;
+    private RelativeLayout r3;
+
+
+    public static final String PREF_USER_FIRST_TIME = "user_first_time";
+    boolean isUserFirstTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Checks if user is first time here
+        isUserFirstTime = Boolean.valueOf(Utils.readSharedSetting(ChoosingFolderActivity.this, PREF_USER_FIRST_TIME, "true"));
+        Intent introIntent = new Intent(ChoosingFolderActivity.this, PagerActivity.class);
+        introIntent.putExtra(PREF_USER_FIRST_TIME, isUserFirstTime);
+        if (isUserFirstTime) {
+            startActivity(introIntent);
+        }
+
         setContentView(R.layout.activity_choosing_folder);
+
+
+
         findViews();
 
         fetchImageUrlsAndUpdateUiAccordingly();
+
     }
 
     private void findViews() {
         rootView = (ViewGroup) findViewById(R.id.root);
         content = (ViewGroup) findViewById(R.id.content);
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);
-        buttonA = (Button) findViewById(R.id.button_folder_a);
-        buttonB = (Button) findViewById(R.id.button_folder_b);
-        buttonC = (Button) findViewById(R.id.button_folder_c);
+       // buttonA = (Button) findViewById(R.id.button_folder_a);
+       // buttonB = (Button) findViewById(R.id.button_folder_b);
+       // buttonC = (Button) findViewById(R.id.button_folder_c);
+
+        rl = (RelativeLayout) findViewById(R.id.RL1);
+        r2 = (RelativeLayout) findViewById(R.id.RL2);
+        r3 = (RelativeLayout) findViewById(R.id.RL3);
+
     }
 
     private void fetchImageUrlsAndUpdateUiAccordingly() {
@@ -113,8 +140,9 @@ public class ChoosingFolderActivity extends AppCompatActivity {
         return strings;
     }
 
+
     private void setupFolderAButton(final String[] urlsFolderA) {
-        buttonA.setOnClickListener(new View.OnClickListener() {
+        rl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -131,7 +159,7 @@ public class ChoosingFolderActivity extends AppCompatActivity {
     }
 
     private void setupFolderBButton(final String[] urlsFolderB) {
-        buttonB.setOnClickListener(new View.OnClickListener() {
+        r2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String folderB = getString(R.string.text_explaining_folder_content_b);
@@ -150,7 +178,7 @@ public class ChoosingFolderActivity extends AppCompatActivity {
     }
 
     private void setupFolderCButton(final String[] urlsFolderC) {
-        buttonC.setOnClickListener(new View.OnClickListener() {
+        r3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String folderC = getString(R.string.text_explaining_folder_content_c);
