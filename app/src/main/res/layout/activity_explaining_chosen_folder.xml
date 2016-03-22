@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ExplainingChosenFolderActivity"
-    android:background="#3F51B5">
+    >
 
     <TextView
         android:id="@+id/text_explaining_folder_content"
@@ -23,11 +23,12 @@
         android:id="@+id/button_ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/button"
         android:padding="16dp"
         android:layout_marginBottom="16dp"
         android:text="@string/let_see_wallpapers_first"
-        android:background="#ff3f80" android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" android:textColor="#ffffff"/>
 
     <ImageView
         android:layout_width="fill_parent"

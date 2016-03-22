@@ -31,6 +31,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 	public void onBindViewHolder(ViewHolder holder, final int position) {
 		Picasso.with(context)
 				.load(imageUrls[position])
+				.resize(300, 300) // resizes the image to these dimensions (in pixel)
+				.centerCrop()
 				.placeholder(R.drawable.mok)
 				.into(holder.imageView);
 
