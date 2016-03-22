@@ -3,14 +3,22 @@
     <string name="folder_a">get more daily motivation</string>
     <string name="folder_b">live healthier life</string>
     <string name="folder_c">be more positive</string>
-    <string name="text_explaining_folder_content_a">You decided to get more daily motivation. Great! Here are things that you should know</string>
-    <string name="text_explaining_folder_content_b">You decided to live healthier life. Great! Here are things that you should know</string>
-    <string name="text_explaining_folder_content_c">You decided to be more positive. Great! Here are things that you should know</string>
+    <string name="text_explaining_folder_content_a">You decided to get more daily motivation. Great!
+        Here are things that you should know
+    </string>
+    <string name="text_explaining_folder_content_b">You decided to live healthier life. Great! Here
+        are things that you should know
+    </string>
+    <string name="text_explaining_folder_content_c">You decided to be more positive. Great! Here are
+        things that you should know
+    </string>
     <string name="choosing_folder">Choose folders you want to....</string>
     <string name="leaving_app">You are leaving this app....</string>
     <string name="yoo_message_a_folder">tamp aram :)</string>
     <string name="toast_message_superstar">You are about to change your LIFE for good</string>
-    <string name="text_app_purpose">This app changes wallpapers on your device based on your chosen goal that you want to achieve</string>
+    <string name="text_app_purpose">This app changes wallpapers on your device based on your chosen
+        goal that you want to achieve
+    </string>
     <string name="show_me_the_pictures">Show me pictures</string>
     <string name="let_see_wallpapers_first">Check Wallpapers first</string>
     <string name="action_set_wallpaper">Set Wallpaper</string>
@@ -21,10 +29,19 @@
     <string name="choose_new_folder">Choose New Folder</string>
     <string name="ok_lets_do_it">OK Let\'s do it</string>
     <string name="do_you_like_your_new_wallpaper">"Do you like your new wallpaper? "</string>
-    <string name="alarm_set_from_device_boot_message">Alarm Set from device boot. Is it working?</string>
-    <string name="main_activity_small_text">We check mobile phones more than 237 times a day on average. If we do that, why don\'t we set our phones for a better use. </string>
+    <string name="alarm_set_from_device_boot_message">Alarm Set from device boot. Is it working?
+    </string>
+    <string name="main_activity_small_text">We check mobile phones more than 237 times a day on
+        average. If we do that, why don\'t we set our phones for a better use.
+    </string>
     <string name="this_is_company_logo_main_activity">This is company logo</string>
     <string name="exit_app_button_message">Have a nice day</string>
-    <string name="something_not_right">Something not right</string>
-    <string name="retry">Retry</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="add_a_long_description_about_app_s_feature">Add a long description here about your
+        app\'s important feature.
+    </string>
+    <string name="something_not_right">something is not right</string>
+    <string name="retry">retry</string>
+
+
 </resources>
