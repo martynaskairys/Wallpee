@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3F51B5"
+
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -15,36 +15,21 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/buttons"
+        android:layout_above="@+id/buttonDoIt"
         tools:listitem="@layout/list_item"/>
-
-    <LinearLayout
-        android:id="@+id/buttons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/buttonChooseNewFolder"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            android:background="#ff3f80"
-            android:padding="8dp"
-            android:text="@string/choose_new_folder"/>
 
         <Button
             android:id="@+id/buttonDoIt"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
+            android:padding="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+
             android:layout_margin="8dp"
-            android:layout_weight="1"
-            android:background="#ff3f80"
-            android:padding="8dp"
-            android:text="@string/ok_lets_do_it"/>
-    </LinearLayout>
+            android:background="@drawable/button"
+            android:text="@string/ok_lets_do_it" android:textColor="#ffffff"/>
+
 
 </RelativeLayout>

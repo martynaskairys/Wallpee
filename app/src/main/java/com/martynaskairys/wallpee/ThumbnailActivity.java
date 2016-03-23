@@ -23,15 +23,6 @@ public class ThumbnailActivity extends AppCompatActivity {
         String[] IMAGES = getIntent().getStringArrayExtra("images");
         showList(IMAGES);
 
-        findViewById(R.id.buttonChooseNewFolder).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ThumbnailActivity.this, ChoosingFolderActivity.class);
-                startActivity(intent);
-
-            }
-        });
-
         findViewById(R.id.buttonDoIt).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
