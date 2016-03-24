@@ -178,8 +178,16 @@ public class PagerActivity extends AppCompatActivity {
         TextView txt;
 
         int[] bgs = new int[]{R.drawable.ic_flight_24dp, R.drawable.ic_mail_24dp, R.drawable.ic_explore_24dp};
-        String[] textsHeaders = new String[]{"Hello1", "Hello2", "Hello3"};
-        String[] texts = new String[]{"test1", "test2", "test3"};
+        String[] textsHeaders = new String[]{
+                "We check our mobile phones very often",
+                "This app helps you with your daily challenges",
+                "New Wallpaper. Automatically. Every day."
+        };
+        String[] texts = new String[]{
+                "We check mobile phones more than 237 times a day on average. If we do that, why don't we set our phones for a better use.",
+                "You just need to decide which goal is most important at the moment",
+                "You do not have to do anything. Just sit and enjoy everyday new wallpaper based on your goal choice"
+        };
 
         public PlaceholderFragment() {
         }

@@ -4,13 +4,19 @@
     <string name="folder_b">live healthier life</string>
     <string name="folder_c">be more positive</string>
     <string name="text_explaining_folder_content_a">You decided to get more daily motivation. Great!
-        Here are things that you should know
+        Every day you will receive a new picture with text on it automatically on your phone screen related to
+        more daily motivation.
+        Go check a gallery of pictures first.
     </string>
-    <string name="text_explaining_folder_content_b">You decided to live healthier life. Great! Here
-        are things that you should know
+    <string name="text_explaining_folder_content_b">You decided to live healthier life. Great!
+        Every day you will receive a new picture with text on it automatically on your phone screen related to
+        live healthier life.
+        Go check a gallery of pictures first.
     </string>
-    <string name="text_explaining_folder_content_c">You decided to be more positive. Great! Here are
-        things that you should know
+    <string name="text_explaining_folder_content_c">You decided to be more positive. Great!
+        Every day you will receive a new picture with text on it automatically on your phone screen related to
+        be more positive.
+        Go check a gallery of pictures first.
     </string>
     <string name="text_app_purpose">This app changes wallpapers on your device based on your chosen
         goal that you want to achieve
@@ -31,9 +37,9 @@
     </string>
     <string name="something_not_right">something is not right</string>
     <string name="retry">retry</string>
-    <string name="choice_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit</string>
-    <string name="choice_2">Etiam rhoncus scelerisque porta</string>
-    <string name="choice_3">Maecenas pulvinar dui eget nibh luctus maximus</string>
+    <string name="choice_1">Even the most motivated of us — you, me, Tony Robbins — can feel unmotivated at times.</string>
+    <string name="choice_2">Check out these ways to be healthier and live longer</string>
+    <string name="choice_3">Life is easy with a positive attitude, wouldn\'t you agree? Well, easier at least</string>
     <string name="exit_app_textview_text">The Magic start at night. Have fun.</string>
     <string name="exit_app_button_text">Exit App</string>
 
