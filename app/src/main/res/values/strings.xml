@@ -42,6 +42,8 @@
     <string name="choice_3">Life is easy with a positive attitude, wouldn\'t you agree? Well, easier at least</string>
     <string name="exit_app_textview_text">The Magic start at night. Have fun.</string>
     <string name="exit_app_button_text">Exit App</string>
+    <string name="choose_one_goal">Choose one goal</string>
+    <string name="i_want_to">I want to...</string>
 
 
 </resources>

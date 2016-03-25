@@ -53,8 +53,9 @@ public class PagerActivity extends AppCompatActivity {
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         mNextBtn = (ImageButton) findViewById(R.id.intro_btn_next);
-        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP)
-            mNextBtn.setImageDrawable(getDrawable(R.drawable.ic_chevron_right_24dp));
+       // if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP)
+        //    mNextBtn.setImageDrawable(getDrawable(R.drawable.ic_chevron_right_24dp));
+        // TODO check mNextBtn code in comments above
 
         mSkipBtn = (Button) findViewById(R.id.intro_btn_skip);
         mFinishBtn = (Button) findViewById(R.id.intro_btn_finish);

@@ -23,7 +23,7 @@
 
             android:id="@+id/my_awesome_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize">
 
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="I want to..."
+                android:text="@string/i_want_to"
                 android:textColor="#ffffff"
                 android:textSize="24sp"/>
 
@@ -49,39 +49,46 @@
         <RelativeLayout
             android:id="@+id/RL1"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/my_awesome_toolbar"
-
             android:clickable="true">
-            <TextView
-                android:id="@+id/tv1a"
-                android:layout_width="wrap_content"
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/iv1"
+                android:layout_toRightOf="@+id/iv1"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:paddingEnd="16dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="16dp"
+                android:paddingStart="0dp"
+                android:paddingTop="16dp">
 
-                android:paddingLeft="4dp" android:paddingRight="16dp"
-                android:paddingTop="24dp" android:text="@string/folder_a"
 
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#212121"/>
-            <TextView
-                android:id="@+id/tv1b"
+                <TextView
+                    android:id="@+id/tv1a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/folder_a"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#212121"/>
+                <TextView
+                    android:id="@+id/tv1b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choice_1"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#727272"/>
+            </LinearLayout>
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv1a"
-
-                android:layout_toEndOf="@+id/iv1"
-                android:paddingLeft="4dp"
-                android:paddingRight="8dp"
-
-                android:text="@string/choice_1"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="#727272"/>
             <ImageView
                 android:id="@+id/iv1"
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
                 android:padding="16dp"
                 android:src="@drawable/balance1"
             />
@@ -92,41 +99,50 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@id/RL1"
-            android:background="?android:attr/listDivider"/>
+            android:background="?android:attr/listDivider"
+        />
 
         <RelativeLayout
             android:id="@+id/RL2"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/RL1"
             android:clickable="true">
-            <TextView
-                android:id="@+id/tv2a"
-                android:layout_width="wrap_content"
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/iv2"
-                android:paddingLeft="4dp" android:paddingRight="16dp"
-                android:paddingTop="24dp" android:text="@string/folder_b"
+                android:layout_toRightOf="@+id/iv2"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:paddingEnd="16dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="16dp"
+                android:paddingStart="0dp"
+                android:paddingTop="16dp">
 
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#212121"/>
-            <TextView
-                android:id="@+id/tv2b"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv2a"
-                android:layout_toEndOf="@+id/iv2"
-
-                android:paddingLeft="4dp"
-                android:paddingRight="8dp"
-                android:text="@string/choice_2"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="#727272"/>
+                <TextView
+                    android:id="@+id/tv2a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/folder_b"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#212121"/>
+                <TextView
+                    android:id="@+id/tv2b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choice_2"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#727272"/>
+            </LinearLayout>
             <ImageView
                 android:id="@+id/iv2"
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
                 android:padding="16dp"
                 android:src="@drawable/health1"
             />
@@ -137,43 +153,50 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@id/RL2"
-            android:background="?android:attr/listDivider"/>
+            android:background="?android:attr/listDivider"
+            android:paddingTop="8dp"/>
 
         <RelativeLayout
             android:id="@+id/RL3"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/RL2"
-
             android:clickable="true">
-            <TextView
-                android:id="@+id/tv3a"
-                android:layout_width="wrap_content"
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/iv3"
-                android:paddingLeft="4dp"
+                android:layout_toRightOf="@+id/iv3"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:paddingEnd="16dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="16dp"
+                android:paddingStart="0dp"
+                android:paddingTop="16dp">
+                <TextView
+                    android:id="@+id/tv3a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/folder_c"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#212121"/>
+                <TextView
+                    android:id="@+id/tv3b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choice_3"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#727272"/>
+            </LinearLayout>
 
-                android:paddingRight="8dp" android:paddingTop="24dp"
-                android:text="@string/folder_c"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#212121"/>
-            <TextView
-                android:id="@+id/tv3b"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv3a"
-
-                android:layout_toEndOf="@+id/iv3"
-                android:paddingLeft="4dp"
-                android:paddingRight="8dp"
-                android:text="@string/choice_3"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="#727272"/>
             <ImageView
                 android:id="@+id/iv3"
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
                 android:padding="16dp"
                 android:src="@drawable/motivation1"
             />
@@ -184,16 +207,19 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@id/RL3"
-            android:background="?android:attr/listDivider"/>
+            android:background="?android:attr/listDivider"
+            android:paddingTop="8dp"
+        />
 
 
-    </RelativeLayout>
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Choose one goal"
-        android:id="@+id/textView" android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" android:layout_marginBottom="32dp"/>
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/v3"
+        android:layout_centerHorizontal="true" android:layout_marginBottom="32dp"
+        android:text="@string/choose_one_goal" android:textAppearance="?android:attr/textAppearanceSmall"/>
+    </RelativeLayout>
 </RelativeLayout>
 
