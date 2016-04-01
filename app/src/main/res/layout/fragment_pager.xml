@@ -1,12 +1,12 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="@dimen/activity_margin_half"
-                android:paddingLeft="@dimen/activity_margin_half"
-                android:paddingRight="@dimen/activity_margin_half"
-                android:paddingTop="@dimen/activity_margin_half"
-                tools:context="com.martynaskairys.wallpee.PagerActivity$PlaceholderFragment">
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:paddingBottom="@dimen/activity_margin_half"
+             android:paddingLeft="@dimen/activity_margin_half"
+             android:paddingRight="@dimen/activity_margin_half"
+             android:paddingTop="@dimen/activity_margin_half"
+             tools:context="com.martynaskairys.wallpee.PagerActivity$PlaceholderFragment">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -17,10 +17,10 @@
             android:layout_width="192dp"
             android:layout_height="192dp"
             android:layout_gravity="center"
+            android:layout_marginBottom="64dp"
             android:adjustViewBounds="true"
             android:alpha="0.30"
-            android:background="@drawable/ic_flight_24dp"
-            android:scaleType="fitCenter" android:layout_marginBottom="64dp"/>
+            android:background="@drawable/ic_flight_24dp" android:scaleType="fitCenter"/>
 
 
     </FrameLayout>
@@ -41,19 +41,19 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="@android:color/white"
-            tools:text="Page One" />
+            tools:text="Page One"/>
 
         <TextView
-            style="@style/TextAppearance.AppCompat.Body1"
             android:id="@+id/section_label_description"
+            style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin_half"
             android:layout_marginBottom="80dp"
+            android:layout_marginTop="@dimen/activity_margin_half"
             android:alpha="0.7"
             android:gravity="center"
             android:text="@string/add_a_long_description_about_app_s_feature"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"/>
 
 
     </LinearLayout>

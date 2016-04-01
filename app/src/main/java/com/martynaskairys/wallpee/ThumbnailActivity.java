@@ -10,6 +10,7 @@ import android.view.View;
 //Shows a list of pictures
 public class ThumbnailActivity extends AppCompatActivity {
 
+
     //Populates list items
     private RecyclerAdapter adapter;
 
